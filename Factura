@@ -27,7 +27,7 @@ void main ()
   subtotal = pVtaP1 + pVtaP2;
   iva = subtotal * 0.12;
   total = subtotal + iva;
-  printf ("******FACTURA******\n");
+  printf ("\t\t******FACTURA******\n");
   printf ("Cliente: %s\n", nombre);
   printf ("Cedula:%d\n", cedula);
   printf ("Descripcion\tCantidad\tPrecio\tPVta\n");
