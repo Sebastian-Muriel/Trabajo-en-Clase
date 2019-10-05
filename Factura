@@ -33,7 +33,7 @@ void main ()
   printf ("Descripcion\tCantidad\tPrecio\tPVta\n");
   printf ("%s\t\t%.2f\t\t%.2f\t%.2f\n", desP1, cantP1, precioP1, pVtaP1);
   printf ("%s\t%.2f\t\t%.2f\t%.2f\n", desP2, cantP2, precioP2, pVtaP2);
-  printf ("\t\t\t\tSubtotal:%.2f\n", subtotal);
-  printf("\t\t\t\tIva:%.2f\n",iva);
-  printf("\t\t\t\tTotal:%.2f\n",total);
+  printf ("\t\t\tSubtotal:\t%.2f\n", subtotal);
+  printf("\t\t\tIva:\t\t%.2f\n",iva);
+  printf("\t\t\tTotal:\t\t%.2f\n",total);
 }
