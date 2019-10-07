@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Datos de Entrada
+Entero: edad
+
+Proceso
+Escribir Ingrese edad
+Leer edad
+si edad>=18
+    Escribir mayor de edad
+sino 
+    Escribir menor de edad
+    
+Salida
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()  
+{
+    int edad;
+    char nombre[10];
+    printf("Ingrese su nombre");
+    scanf("%s", nombre);
+    printf("Ingrese su edad");
+    scanf("%d",&edad);
+    if(edad>=18)
+        printf("%s Es mayor de edad", nombre);
+    else
+        printf("%s Es menor de edad", nombre);
+    
+}
