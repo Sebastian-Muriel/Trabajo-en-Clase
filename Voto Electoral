@@ -1,0 +1,53 @@
+/******************************************************************************
+
+Los organizadores de un acto electoral solicitaron realizar un programa para manejar
+el conteo de votos. En la elección hay cinco candidatos, los cuales se representan con
+los valores comprendidos entre 1 y 5. El programa debe obtener el número de votos de 
+cada candidato y el porcentaje que obtuvo respecto al total de los votantes. 
+Se ingresa los votos  de manera desordenada, el final de ingreso de los votos se 
+representa por un cero.
+
+Ejemplo
+
+ INGRESO DE VOTOS:
+
+2 5 5 4 3 5 1 2 4 3 1 2 4 5 0
+
+2 representa un voto para el candidato2
+
+5 representa un voto para el candidato5
+
+4 representa un voto para el candidato4
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, total=0;
+    float porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0;
+    printf ("Ingrese su voto:");
+    scanf("%d",&voto);
+    if(voto==1)
+        cantV1++;
+    else if(voto==2)
+        cantV2++;
+    else if(voto==3)
+        cantV3++;
+    else if(voto==4)
+        cantV4++;
+    else if(voto==5)
+        cantV5++;
+    
+    total=cantV1+cantV2+cantV3+cantV4+cantV5;
+    porcV1=(cantV1/total)*100;
+    porcV2=(cantV2/total)*100;
+    porcV3=(cantV3/total)*100;
+    porcV4=(cantV4/total)*100;
+    porcV5=(cantV5/total)*100;
+    
+    printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);
+    printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);
+    printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);
+    printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);
+    printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);
+}
