@@ -1,0 +1,96 @@
+/******************************************************************************
+Realizar un menu que contenga los siguientes ejercicios:  
+
+*******************************************************************************/
+#include <stdio.h>
+void main()
+{
+    int op,edad, voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, total=0;
+    char nombre[10];
+    float nivelHem, porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0;
+    printf("1.Mayor de edad\n2.Labratorio Clinico\n3.Voto Electoral\n");
+    printf("Escoja la opcion:");
+    scanf("%d",&op);
+    fflush(stdin);
+    switch(op)
+    {
+        case 1:
+        printf("Ingrese su nombre:");
+        gets(nombre);
+        printf("Ingrese su edad:");
+        scanf("%d",&edad);
+        if(edad>=18)
+            printf("%s Es mayor de edad", nombre);
+        else
+            printf("%s Es menor de edad", nombre);
+        
+        break;
+        case 2:
+        printf("Menu Principal\n1.Edad en meses\n2. Edad en años\n");
+        printf("Escoja la opcion:");
+        scanf("%d",&op);
+        if(op==1)
+        {
+            printf("Ingrese la edad en meses:");
+            scanf("%d",&edad);
+            printf("Ingrese el nivel de Hemoglobina:");
+            scanf("%f",&nivelHem);
+            if(edad>=0 && edad<=1 && nivelHem>=13 && nivelHem<=26)
+                printf("No tiene anemia");
+            else if (edad>1 && edad<=6 && nivelHem>=10 && nivelHem<=18)
+                printf("No tiene anemia");
+            else if (edad>6 && edad<=12 && nivelHem>=11 && nivelHem<=15)
+                printf("No tiene anemia");
+            else
+            printf ("Tiene anemia");
+        }
+        else if(op==2)
+        {
+            printf("Ingrese la edad en años:");
+            scanf("%d",&edad);
+            printf("Ingrese el nivel de Hemoglobina:");
+            scanf("%f",&nivelHem);
+            if(edad>1 && edad<=5 && nivelHem>=11.5 && nivelHem<=15)
+                printf("No tiene anemia");
+            else if (edad>5 && edad<=10 && nivelHem>=12.6 && nivelHem<=15.5)
+                printf("No tiene anemia");
+            else if (edad>10 && edad<=15 && nivelHem>=13 && nivelHem<=15.5)
+                printf("No tiene anemia");
+            else
+                printf("Tiene anemia");
+        }
+        
+        break;
+        case 3:
+        printf ("Ingrese su voto:");
+        scanf("%d",&voto);
+        if(voto==1)
+            cantV1++;
+        else if(voto==2)
+            cantV2++;
+        else if(voto==3)
+            cantV3++;
+        else if(voto==4)
+            cantV4++;
+        else if(voto==5)
+            cantV5++;
+    
+        total=cantV1+cantV2+cantV3+cantV4+cantV5;
+        porcV1=(cantV1/total)*100;
+        porcV2=(cantV2/total)*100;
+        porcV3=(cantV3/total)*100;
+        porcV4=(cantV4/total)*100;
+        porcV5=(cantV5/total)*100;
+    
+        printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);
+        printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);
+        printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);
+        printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);
+        printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);
+        
+        break;
+        default:
+        printf("Opcon Invalida");
+        break;
+    }
+}
