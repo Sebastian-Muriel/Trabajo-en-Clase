@@ -1,5 +1,5 @@
 /******************************************************************************
-Realizar un menu que contenga los siguientes ejercicios:  
+Realizar un menu que contenga los siguientes ejercicios: Mayor de edad, Labratorio Clinico, Voto Electoral
 
 *******************************************************************************/
 #include <stdio.h>
