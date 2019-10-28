@@ -1,5 +1,5 @@
 /******************************************************************************
-
+Programa para determinar el nombre y si es mayor o menor de edad
 Datos de Entrada
 Entero: edad
 
@@ -12,21 +12,20 @@ sino
     Escribir menor de edad
     
 Salida
-
 *******************************************************************************/
-#include <stdio.h>
+#include <stdio.h>                                                              //se incluye a la libreria//
 
-int main()  
+void main()                                                                     //no devuelve ningun valor//
 {
-    int edad;
-    char nombre[10];
-    printf("Ingrese su nombre");
-    scanf("%s", nombre);
-    printf("Ingrese su edad");
-    scanf("%d",&edad);
-    if(edad>=18)
-        printf("%s Es mayor de edad", nombre);
-    else
-        printf("%s Es menor de edad", nombre);
+    int edad;                                                                   //variables de tipo entero//
+    char nombre[10];                                                            //variable de tipo cadena de caracteres//
+    printf("Ingrese su nombre");                                                //se ingresa el nombre//
+    scanf("%s", nombre);                                                        //lee el nombre//
+    printf("Ingrese su edad");                                                  //se ingresa la edad//
+    scanf("%d",&edad);                                                          //lee la edad//
+    if(edad>=18)                                                                //sentencia if si la edad es mayor o igual de 18//
+        printf("%s Es mayor de edad", nombre);                                  //se imprime el nombre y si es mayor de edad//
+    else                                                                        //si no cumple la anterior condicion se realiza lo siiguiente//
+        printf("%s Es menor de edad", nombre);                                  //se imprime el nombre y si es menor de edad//
     
 }
