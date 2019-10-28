@@ -1,5 +1,4 @@
 /******************************************************************************
-
 Los organizadores de un acto electoral solicitaron realizar un programa para manejar
 el conteo de votos. En la elección hay cinco candidatos, los cuales se representan con
 los valores comprendidos entre 1 y 5. El programa debe obtener el número de votos de 
@@ -19,35 +18,36 @@ Ejemplo
 
 4 representa un voto para el candidato4
 *******************************************************************************/
-#include <stdio.h>
-
-void main()
+#include <stdio.h>                                                                                      //se incluye a la libreria//
+    
+void main()                                                                                             //no devuelve ningun valor//
 {
-    int voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, total=0;
-    float porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0;
-    printf ("Ingrese su voto:");
-    scanf("%d",&voto);
-    if(voto==1)
-        cantV1++;
-    else if(voto==2)
-        cantV2++;
-    else if(voto==3)
-        cantV3++;
-    else if(voto==4)
-        cantV4++;
-    else if(voto==5)
-        cantV5++;
+    int voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, total=0;                                //variables de tipo entero//
+    float porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0;                                             //variables de tipo flotante//
+    printf ("Ingrese su voto:");                                                                        //se ingresa el voto//
+    scanf("%d",&voto);                                                                                  //lee el voto//
+    if(voto==1)                                                                                         //si el voto es igual a 1 se realiza la siguiente sentencia//
+        cantV1++;                                                                                       //el contador de votos del Candidato 1 aumenta//
+    else if(voto==2)                                                                                    //si el voto es igual a 2 se realiza la siguiente sentencia//
+        cantV2++;                                                                                       //el contador de votos del Candidato 2 aumenta//
+    else if(voto==3)                                                                                    //si el voto es igual a 3 se realiza la siguiente sentencia//
+        cantV3++;                                                                                       //el contador de votos del Candidato 3 aumenta//
+    else if(voto==4)                                                                                    //si el voto es igual a 4 se realiza la siguiente sentencia//
+        cantV4++;                                                                                       //el contador de votos del Candidato 4 aumenta//
+    else if(voto==5)                                                                                    //si el voto es igual a 5 se realiza la siguiente sentencia//
+        cantV5++;                                                                                       //el contador de votos del Candidato 5 aumenta//
     
-    total=cantV1+cantV2+cantV3+cantV4+cantV5;
-    porcV1=(cantV1/total)*100;
-    porcV2=(cantV2/total)*100;
-    porcV3=(cantV3/total)*100;
-    porcV4=(cantV4/total)*100;
-    porcV5=(cantV5/total)*100;
+    total=cantV1+cantV2+cantV3+cantV4+cantV5;                                                           //formula para sacar el numero total de votos//
+    porcV1=(cantV1/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 1//
+    porcV2=(cantV2/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 2//
+    porcV3=(cantV3/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 3//
+    porcV4=(cantV4/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 4//
+    porcV5=(cantV5/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 5//
     
-    printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);
-    printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);
-    printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);
-    printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);
-    printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);
+    printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);       //se imprime el total de votos del Candidato 1 con su porcentaje//
+    printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);       //se imprime el total de votos del Candidato 2 con su porcentaje//
+    printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);       //se imprime el total de votos del Candidato 3 con su porcentaje//
+    printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);       //se imprime el total de votos del Candidato 4 con su porcentaje//
+    printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);       //se imprime el total de votos del Candidato 5 con su porcentaje//
 }
+
