@@ -2,42 +2,42 @@
 Realizar una factura de dos productos 
 
 *******************************************************************************/
-#include <stdio.h>
-void main ()
+#include <stdio.h>                                                                              //se incluye a la libreria//
+void main ()                                                                                    //no devuelve ningun valor//
 {
-  char nombre[10], desP1[10], desP2[10];
-  int cedula;
-  float cantP1, cantP2, precioP1, precioP2, pVtaP1, pVtaP2, subtotal =0, iva, total = 0;
-  printf ("Ingrese el nombre del cliente:");
-  scanf ("%s", &nombre);
-  printf ("Ingrese la cedula:");
-  scanf ("%d", &cedula);
-  printf ("Datos del Producto1\n");
-  printf ("Ingrese la descripcion:");
-  scanf ("%s", &desP1);
-  printf ("Ingrese la cantidad:");
-  scanf ("%f", &cantP1);
-  printf ("Ingrese el precio:");
-  scanf ("%f", &precioP1);
-  printf ("Datos del Producto2\n");
-  printf ("Ingrese la descripcion:");
-  scanf ("%s", &desP2);
-  printf ("Ingrese la cantidad:");
-  scanf ("%f", &cantP2);
-  printf ("Ingrese el precio:");
-  scanf ("%f", &precioP2);
-  pVtaP1 = cantP1 * precioP1;
-  pVtaP2 = cantP2 * precioP2;
-  subtotal = pVtaP1 + pVtaP2;
-  iva = subtotal * 0.12;
-  total = subtotal + iva;
-  printf ("\t\t******FACTURA******\n");
-  printf ("Cliente: %s\n", nombre);
-  printf ("Cedula:%d\n", cedula);
-  printf ("Descripcion\tCantidad\tPrecio\tPVta\n");
-  printf ("%s\t\t%.2f\t\t%.2f\t%.2f\n", desP1, cantP1, precioP1, pVtaP1);
-  printf ("%s\t%.2f\t\t%.2f\t%.2f\n", desP2, cantP2, precioP2, pVtaP2);
-  printf ("\t\t\tSubtotal:\t%.2f\n", subtotal);
-  printf("\t\t\tIva:\t\t%.2f\n",iva);
-  printf("\t\t\tTotal:\t\t%.2f\n",total);
+  char nombre[10], desP1[10], desP2[10];                                                        //variables que se va a utilizar de tipo cadenas de caracteres//
+  int cedula;                                                                                   //variables que se va a utilizar de tipo entero//
+  float cantP1, cantP2, precioP1, precioP2, pVtaP1, pVtaP2, subtotal =0, iva, total = 0;        //variables que se va a utilizar de tipo flotante//
+  printf ("Ingrese el nombre del cliente:");                                                    //se ingresa el nombre//
+  scanf ("%s", &nombre);                                                                        //lee el nombre//
+  printf ("Ingrese la cedula:");                                                                //se Ingresa la cedula//
+  scanf ("%d", &cedula);                                                                        //lee la cedula//
+  printf ("Datos del Producto1\n");                                                             //se imprime la frase datos del producto 1// 
+  printf ("Ingrese la descripcion:");                                                           //se ingresa el producto 1//
+  scanf ("%s", &desP1);                                                                         //lee el producto 1//
+  printf ("Ingrese la cantidad:");                                                              //se ingresa la cantidad del producto 1//
+  scanf ("%f", &cantP1);                                                                        //lee la cantidad del producto 1//
+  printf ("Ingrese el precio:");                                                                //se ingresa el precio del producto 1//
+  scanf ("%f", &precioP1);                                                                      //lee el precio del producto 1//
+  printf ("Datos del Producto2\n");                                                             //se imprime la frase datos del producto 2//
+  printf ("Ingrese la descripcion:");                                                           //se ingresa el producto 2//
+  scanf ("%s", &desP2);                                                                         //lee el producto 2//
+  printf ("Ingrese la cantidad:");                                                              //se ingresa la cantidad del producto 2//
+  scanf ("%f", &cantP2);                                                                        //lee la cantidad del producto 2//
+  printf ("Ingrese el precio:");                                                                //se ingresa el precio del producto 2//
+  scanf ("%f", &precioP2);                                                                      //lee el precio del producto 2//
+  pVtaP1 = cantP1 * precioP1;                                                                   //formula para sacar el precio de venta del prodcuto 1//
+  pVtaP2 = cantP2 * precioP2;                                                                   //formula para sacar el precio de venta del prodcuto 2//
+  subtotal = pVtaP1 + pVtaP2;                                                                   //formula para sacar el subtotal de la compra//
+  iva = subtotal * 0.12;                                                                        //formula para sacar el iva de la compra//
+  total = subtotal + iva;                                                                       //formula para sacar el precio total de la compra// 
+  printf ("\t\t******FACTURA******\n");                                                         //se imprime el titulo FACTURA//
+  printf ("Cliente: %s\n", nombre);                                                             //se imprime el nombre del cliente//
+  printf ("Cedula:%d\n", cedula);                                                               //se imprime la cedula del cliente//
+  printf ("Descripcion\tCantidad\tPrecio\tPVta\n");                                             //se imprime los terminos: Descripcion, Cantidad, Precio, PVta//
+  printf ("%s\t\t%.2f\t\t%.2f\t%.2f\n", desP1, cantP1, precioP1, pVtaP1);                       //se imprime la Descripcion, Cantidad, Precio, PVta del producto 1//
+  printf ("%s\t%.2f\t\t%.2f\t%.2f\n", desP2, cantP2, precioP2, pVtaP2);                         //se imprime la Descripcion, Cantidad, Precio, PVta del producto2//
+  printf ("\t\t\tSubtotal:\t%.2f\n", subtotal);                                                 //se imprime el subtotal de la compra//
+  printf("\t\t\tIva:\t\t%.2f\n",iva);                                                           //se imprime el iva de la compra//
+  printf("\t\t\tTotal:\t\t%.2f\n",total);                                                       //se imprime el precio total de la compra//
 }
