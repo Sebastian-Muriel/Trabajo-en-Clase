@@ -1,0 +1,26 @@
+/******************************************************************************
+Realizar un programa en C de n numeros positivos para verificar si es par o impar
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+void main()                                                                     //no devuelve nigun valor//
+{
+    int cantNum, num, cont=1;                                                   //variables de tipo entero//
+    printf("Cuantos numeros va ingresar:");                                     //se ingresa la cantidad de numeros//
+    scanf("%d", &cantNum);                                                      //lee la cantidad de numeros//
+    while (cont<=cantNum)                                                       //sentencia while se realiza las siguientes sentencias si cumple que el contador sea menor o igual a la cantidad de numeros//
+    {
+        printf("Ingrese el numero:");                                           //se ingresa el numero//
+        scanf("%d", &num);                                                      //lee el numero//
+        while(num<=0)                                                           //sentencia while se realiza lo siguiente si cumple que el numero sea menor o igual a 0//
+        {
+            printf("Ingrese un numero positivo:");                              //se ingresa nuevamente el numero//
+            scanf("%d", &num);                                                  //lee el numero//
+            
+        }
+        if(num%2==0)                                                            //sentencia if se realiza lo siguiente solo si el residuo de la division para 2 es 0//
+            printf("Par\n");                                                    //se imprime que el numero es par//
+        else                                                                    //si no cumple la condicion se realiza lo siguiente//
+            printf("Impar\n");                                                  //se imprime que el numwero es impar//
+        cont++;                                                                 //el contador aumenta//
+    }
+}
