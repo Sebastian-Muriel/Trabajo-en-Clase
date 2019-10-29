@@ -11,57 +11,57 @@ La tarifa horaria es de 40 dólares
 Se desea escribir el SALARIO BRUTO(salario antes de impuesto), TASAS DE
 IMPUESTOS , Y SALARIO NETO(salario después de impuestos).
 *******************************************************************************/
-#include <stdio.h>
-#define tarHoras 40
-void main()
+#include <stdio.h>                                                              //se incluye a la libreria//
+#define tarHoras 40                                                             //se declara a la variable como definida//
+void main()                                                                     //no se devuelve ningun valor//
 {
-    int horas;
-    float salBruto=0, salNeto=0, imp25=0, imp45=0;
-    printf("Ingrese numero de horas:");
-    scanf("%d", &horas);
-    if (horas<=35)
+    int horas;                                                                  //variables de tipo entero//
+    float salBruto=0, salNeto=0, imp25=0, imp45=0;                              //variables de tipo flotante//
+    printf("Ingrese numero de horas:");                                         //se ingresa el numero de horas//
+    scanf("%d", &horas);                                                        //lee el numero de horas//
+    if (horas<=35)                                                              //sentencia if con condicion si las horas son menores o igual a 35//
     {
-        salBruto=horas*tarHoras;
-        if (salBruto<=1000)
+        salBruto=horas*tarHoras;                                                //formula para sacar el salario bruto//
+        if (salBruto<=1000)                                                     //sentencia if con condicion si el salario bruto es menor o igual a 1000//
         {
-            salNeto=salBruto;
+            salNeto=salBruto;                                                   //formula para sacar el salario neto//
         }
-        else if (salBruto>1000 && salBruto<1500)
+        else if (salBruto>1000 && salBruto<1500)                                //si no cumple la anterior condicion se aplica la siguiente condicion si el salario bruto es mayor a 1000 y menor a 1500//
         {
-            imp25=salBruto*0.25;
-            salNeto=salBruto-imp25;
+            imp25=salBruto*0.25;                                                //formula para sacar el impuesto del 25%//
+            salNeto=salBruto-imp25;                                             //formula para sacar el salario neto//
         }
-        else if (salBruto>=1500)
+        else if (salBruto>=1500)                                                //si no cumple ninguna de las anteriores condiciones se aplica la siguiente condicion si el salario bruto es mayor o igual a 1500//
         {
-            imp45=salBruto*0.45;
-            salNeto=salBruto-imp45;
+            imp45=salBruto*0.45;                                                //formula para sacar el impuesto del 45%//
+            salNeto=salBruto-imp45;                                             //formula para sacar el salario neto//
         }
-        printf("El salario bruto es: %2.f\n", salBruto);
-        printf("El impuesto a pagar es: %2.f\n", imp25);
-        printf("El impuesto a pagar es: %2.f\n", imp45);
-        printf("El salario neto es: %2.f", salNeto);
+        printf("El salario bruto es: %2.f\n", salBruto);                        //se imprime el salario bruto//
+        printf("El impuesto a pagar es: %2.f\n", imp25);                        //se imprime el impuesto de 25%//
+        printf("El impuesto a pagar es: %2.f\n", imp45);                        //se imprime el impuesto de 45%//
+        printf("El salario neto es: %2.f", salNeto);                            //se imprime el salario neto//
     }
         
-    else 
+    else                                                                        //si no cumple la anterior condicion de numeros de horas menores o igual a 35 se realiza la siguiente sentencia//
     {
-        salBruto=horas*tarHoras*1.5;
-        if (salBruto<=1000)
+        salBruto=horas*tarHoras*1.5;                                            //formula para sacar el salario bruto//
+        if (salBruto<=1000)                                                     //sentencia if con condicion si el salario bruto es menor o igual a 1000//
         {
-            salNeto=salBruto;
+            salNeto=salBruto;                                                   //formula para sacar el salario neto//
         }
-        else if (salBruto>1000 && salBruto<1500)
+        else if (salBruto>1000 && salBruto<1500)                                //si no cumple la anterior condicion se aplica la siguiente condicion si el salario bruto es mayor a 1000 y menor a 1500//
         {
-            imp25=salBruto*0.25;
-            salNeto=salBruto-imp25;
+            imp25=salBruto*0.25;                                                //formula para sacar el impuesto del 25%//
+            salNeto=salBruto-imp25;                                             //formula para sacar el salario neto//
         }
-        else if (salBruto>=1500)
+        else if (salBruto>=1500)                                                //si no cumple ninguna de las anteriores condiciones se aplica la siguiente condicion si el salario bruto es mayor o igual a 1500//
         {
-            imp45=salBruto*0.45;
-            salNeto=salBruto-imp45;
+            imp45=salBruto*0.45;                                                //formula para sacar el impuesto del 45%//
+            salNeto=salBruto-imp45;                                             //formula para sacar el salario neto//
         }
-        printf("El salario bruto es: %2.f\n", salBruto);
-        printf("El impuesto a pagar es: %2.f\n", imp25);
-        printf("El impuesto a pagar es: %2.f\n", imp45);
-        printf("El salario neto es: %2.f", salNeto);
+        printf("El salario bruto es: %2.f\n", salBruto);                        //se imprime el salario bruto//
+        printf("El impuesto a pagar es: %2.f\n", imp25);                        //se imprime el impuesto de 25%//
+        printf("El impuesto a pagar es: %2.f\n", imp45);                        //se imprime el impuesto de 45%//
+        printf("El salario neto es: %2.f", salNeto);                            //se imprime el salario neto//
     }
 }
