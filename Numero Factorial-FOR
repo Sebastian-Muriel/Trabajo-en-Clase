@@ -1,0 +1,16 @@
+/******************************************************************************
+Hallar el factorial de un munero
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+
+void main()                                                                     //no se devuelve ningun valor//
+{
+    int num, cont=1;                                                            //variables de tipo entero//
+    double fact=1;                                                              //variables de tipo double//
+    printf("Escriba el numero:");                                               //se ingresa el numero//
+    scanf("%d", &num);                                                          //lee el numero//
+    for (cont=1; cont<=num; cont++)                                             //sentencia for, se realiza la siguiente sentencia si cumple la condicion contador menor o igual al numero//
+        fact*=cont;                                                             //formula para sacar el factorial del numero//
+        printf ("El factorial de %d es: %.0lf", num, fact);                     //se imprime el resultado del numero factorial//
+}
+
