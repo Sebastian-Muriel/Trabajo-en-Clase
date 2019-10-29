@@ -1,0 +1,18 @@
+/******************************************************************************
+Tabla de multiplicar de un mumero
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+void main()                                                                     //no devuelve ningun valor//
+{
+    int tabla, cont=1, lim, mult=0;                                             //variables de tipo entero//
+    printf("Ingrese el limite:");                                               //se ingresa hasta que numero se va a multiplicar//
+    scanf("%d",&lim);                                                           //lee el numero hasta cual se va a multiplicar//
+    printf("Ingrese la tabla de multiplicar:");                                 //se ingresa el numero con el cual se va a realizar la tabla de multiplicar//
+    scanf("%d",&tabla);                                                         //lee el numero con el que se va a realizar la tabla de multiplicar//
+    while(cont<=lim)                                                            //sentencia while se realiza lo siguiente si cumple que el contador sea menor o igual al numero limite de la tabla de multiplicar//
+    {
+        mult=tabla*cont;                                                        //formula para sacar el resultado de la tabla de multiplicar//
+        printf("%dX%d=%d\n", tabla, cont, mult);                                //se imprime la tabla de multiplicar//
+        cont++;                                                                 //acumulador del contador//
+    }
+}
