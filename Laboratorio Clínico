@@ -1,5 +1,4 @@
 /******************************************************************************
-
 En un laboratorio de análisis clínico, un médico determina si una persona tiene anemia o no,
 lo cual depende de su nivel de hemoglobina en la sangre, de su edad y de su género. Si el nivel 
 de hemoglobina que tiene una persona es menor que el rango que le corresponde, se determina su
@@ -14,43 +13,44 @@ EDAD                              NIVEL HEMOGLOBINA
 > 5 y < = 10 años                 entre 12.6 y 15.5 g%
 > 10 y < = 15 años                entre 13 y 15.5 g%
 *******************************************************************************/
-#include <stdio.h>
+#include <stdio.h>                                                              //se incluye a la libreria//
 
-void main()
+void main()                                                                     //no devulve ningun valor//
 {
-    int edad, op;
-    float nivelHem;
-    printf("Menu Principal\n1.Edad en meses\n2. Edad en años\n");
-    printf("Escoja la opcion:");
-    scanf("%d",&op);
-    if(op==1)
+    int edad, op;                                                               //variables de tipo entero//
+    float nivelHem;                                                             //variables de tipo flotante//
+    printf("Menu Principal\n1.Edad en meses\n2. Edad en años\n");               //Se imprime el titulo MENU PRINCIPAL y las opciones que existe en el programa//
+    printf("Escoja la opcion:");                                                //se ingresa la opcion//
+    scanf("%d",&op);                                                            //lee la opcion//
+    if(op==1)                                                                   //sentencia if si la opcion es igual a 1//
     {
-    printf("Ingrese la edad en meses:");
-    scanf("%d",&edad);
-    printf("Ingrese el nivel de Hemoglobina:");
-    scanf("%f",&nivelHem);
-    if(edad>=0 && edad<=1 && nivelHem>=13 && nivelHem<=26)
-        printf("No tiene anemia");
-    else if (edad>1 && edad<=6 && nivelHem>=10 && nivelHem<=18)
-        printf("No tiene anemia");
-    else if (edad>6 && edad<=12 && nivelHem>=11 && nivelHem<=15)
-        printf("No tiene anemia");
-    else
-    printf ("Tiene anemia");
+    printf("Ingrese la edad en meses:");                                        //se ingresa la edad en meses de la persona//
+    scanf("%d",&edad);                                                          //lee la edad en meses//
+    printf("Ingrese el nivel de Hemoglobina:");                                 //se ingresa el nivel de hemoglobina//
+    scanf("%f",&nivelHem);                                                      //lee el nivel de hemoglobina//
+    if(edad>=0 && edad<=1 && nivelHem>=13 && nivelHem<=26)                      //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+        printf("No tiene anemia");                                              //si cumple las condiciones se imprime que no tiene anemia//
+    else if (edad>1 && edad<=6 && nivelHem>=10 && nivelHem<=18)                 //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+        printf("No tiene anemia");                                              //si cumple las condiciones se imprime que no tiene anemia//
+    else if (edad>6 && edad<=12 && nivelHem>=11 && nivelHem<=15)                //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+        printf("No tiene anemia");                                              //si cumple las condiciones se imprime que no tiene anemia//
+    else                                                                        //si no cumple ninguna de las anteriores condiciones se realiza la siguiente sentencia//
+    printf ("Tiene anemia");                                                    //se imprime que tiene anemia//
     }
-    else 
+    else                                                                        //si la opcion es diferente a 1 se realiza las siguientes sentencias//
     {
-        printf("Ingrese la edad en años:");
-        scanf("%d",&edad);
-        printf("Ingrese el nivel de Hemoglobina:");
-        scanf("%f",&nivelHem);
-        if(edad>1 && edad<=5 && nivelHem>=11.5 && nivelHem<=15)
-            printf("No tiene anemia");
-        else if (edad>5 && edad<=10 && nivelHem>=12.6 && nivelHem<=15.5)
-            printf("No tiene anemia");
-        else if (edad>10 && edad<=15 && nivelHem>=13 && nivelHem<=15.5)
-           printf("No tiene anemia");
-        else
-        printf("Tiene anemia");
+        printf("Ingrese la edad en años:");                                     //se ingresa la edad en años de la persona//
+        scanf("%d",&edad);                                                      //lee la edad en años//
+        printf("Ingrese el nivel de Hemoglobina:");                             //se ingresa el nivel de hemoglobina//
+        scanf("%f",&nivelHem);                                                  //lee el nivel de hemoglobina//
+        if(edad>1 && edad<=5 && nivelHem>=11.5 && nivelHem<=15)                 //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+            printf("No tiene anemia");                                          //si cumple las condiciones se imprime que no tiene anemia//
+        else if (edad>5 && edad<=10 && nivelHem>=12.6 && nivelHem<=15.5)        //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+            printf("No tiene anemia");                                          //si cumple las condiciones se imprime que no tiene anemia//
+        else if (edad>10 && edad<=15 && nivelHem>=13 && nivelHem<=15.5)         //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+           printf("No tiene anemia");                                           //si cumple las condiciones se imprime que no tiene anemia//
+        else                                                                    //si no cumple ninguna de las anteriores condiciones se realiza la siguiente sentencia//
+        printf("Tiene anemia");                                                 //se imprime que tiene anemia//
     }
 }
+
