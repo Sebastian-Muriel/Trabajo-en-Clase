@@ -1,39 +1,41 @@
 /******************************************************************************
 Realizar un menu que contenga la ecuacion cuadratica y el area de un triangulo
 *******************************************************************************/
-#include <stdio.h>
-#include <math.h>
-void main()
+#include <stdio.h>                                                                      //se incluye a la libreria//
+#include <math.h>                                                                       //se incluye a la libreria//
+void main()                                                                             //no devuelve ningun valor//
 {
-    int op;
-    float base, alt, area=0,x1=0, x2=0, a, b, c;
-    printf("Menu Princincipal\n1.Ecuacion Cuadratica\n2.Area de un Triangulo\n");
-    printf("Escoja la opcion:");
-    scanf("%d", &op);
-    switch(op)
+    int op;                                                                             //variables de tipo entero//
+    float base, alt, area=0,x1=0, x2=0, a, b, c;                                        //variables de tipo flotante//
+    printf("Menu Princincipal\n1.Ecuacion Cuadratica\n2.Area de un Triangulo\n");       //se imprime l titulo MENU PRINCIPAL y sus opciones//
+    printf("Escoja la opcion:");                                                        //se ingresa la opcion//
+    scanf("%d", &op);                                                                   //lee la opcion//
+    switch(op)                                                                          //comienzo de los casos//
     {
-        case 1:
-            printf("Ingrese el coeficiente a:");
-            scanf("%f", &a);
-            printf("Ingrese el coeficiente b:");
-            scanf("%f", &b);
-            printf("Ingrese el coeficiente c:");
-            scanf("%f", &c);
-            x1=((-b+sqrt(pow(b,2)-4*a*c))/2*a);
-            x1=((-b-sqrt(pow(b,2)-4*a*c))/2*a);
-            printf("El resultado de x1 es:%f\n", x1);
-            printf("El resultado de x2 es:%f\n", x2);
-        break;
-        case 2:
-            printf("Ingrese la base:");
-            scanf("%f", &base);
-            printf("Ingrese la altura:");
-            scanf("%f", &alt);
-            area=(base*alt)/2;
-            printf("El area del triangulo es: %2.f", area);
-        break;
-        default:
-            printf("Opcion incorrecta");
-        break;
+        case 1:                                                                         //inicio caso 1//
+            printf("Ingrese el coeficiente a:");                                        //se ingresa el coeficiente de a//
+            scanf("%f", &a);                                                            //lee el coeficiente de a//
+            printf("Ingrese el coeficiente b:");                                        //se ingresa el coeficiente de b//                                        
+            scanf("%f", &b);                                                            //lee el coeficiente de b//
+            printf("Ingrese el coeficiente c:");                                        //se ingresa el coeficiente de c// 
+            scanf("%f", &c);                                                            //lee el coeficiente de c//
+            x1=((-b+sqrt(pow(b,2)-4*a*c))/2*a);                                         //formula para sacar el valor de x1//                             
+            x2=((-b-sqrt(pow(b,2)-4*a*c))/2*a);                                         //formula para sacar el valor de x2//
+            printf("El resultado de x1 es:%f\n", x1);                                   //se imprime el valor de x1//
+            printf("El resultado de x2 es:%f\n", x2);                                   //se imprime el valor de x2//
+            
+        break;                                                                          //fin caso 1//
+        case 2:                                                                         //inicio caso 2//
+            printf("Ingrese la base:");                                                 //se ingresa el valor de la base//
+            scanf("%f", &base);                                                         //lee el valor de la base//
+            printf("Ingrese la altura:");                                               //se ingresa el valor de la altura//
+            scanf("%f", &alt);                                                          //lee el valor de la altura//
+            area=(base*alt)/2;                                                          //formula para sacar el area de un triangulo//
+            printf("El area del triangulo es: %2.f", area);                             //se imprime el valor del area//
+            
+        break;                                                                          //fin caso 2//
+        default:                                                                        //si la opcion no existe se realiza lo siguiente//
+            printf("Opcion incorrecta");                                                //se imprime que la opciomn es invalida//
+        break;                                                                          //fin del menu//
     }
 }
