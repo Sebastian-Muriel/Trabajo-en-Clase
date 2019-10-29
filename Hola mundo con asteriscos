@@ -1,6 +1,5 @@
 /******************************************************************************
 Ecribir HOLA MUNDO con asteriscos
-
 *******************************************************************************/
 #include <stdio.h>  //se incluye a la libreria//
 void main ()   //no devuelve ningun valor//
