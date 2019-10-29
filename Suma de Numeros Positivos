@@ -1,0 +1,17 @@
+/******************************************************************************
+Realizar un programa en C que ingrese un grupo de numeros y realizar la suma de los positivos 
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+void main()                                                                     //no devuelve nigun valor//
+{
+    int num=1, suma=0;                                                          //variables de tipo entero//
+    while (num>=1)                                                              //sentencia while si cumple la condicion de que el numero sea mayor o igual a 1 se realiza lo siguiente//
+    {
+        printf("Ingrese el numero:");                                           //se ingresa el numero//
+        scanf("%d", &num);                                                      //lee el numero//
+        if(num>0)                                                               //sentencia if si el numero es mayor a cero se realiza lo siguiente//
+            suma=num+suma;                                                      //formula para sacar la suma total de todos los numeros positivos//
+    }
+    printf("La suma de los numeros positivos es: %d", suma);                    //se imprime el resultado de la suma//
+}
+
