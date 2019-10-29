@@ -1,96 +1,96 @@
 /******************************************************************************
-Realizar un menu que contenga los siguientes ejercicios: Mayor de edad, Labratorio Clinico, Voto Electoral
+Realizar un menu que contenga los siguientes ejercicios: Mayor de edad, Labratorio Clinico, Voto Electoral 
 
 *******************************************************************************/
-#include <stdio.h>
-void main()
+#include <stdio.h>                                                                                          //se incluye a la libreria//
+void main()                                                                                                 //no devuelve ningun valor//
 {
-    int op,edad, voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, total=0;
-    char nombre[10];
-    float nivelHem, porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0;
-    printf("1.Mayor de edad\n2.Labratorio Clinico\n3.Voto Electoral\n");
-    printf("Escoja la opcion:");
-    scanf("%d",&op);
+    int op,edad, voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, total=0;                           //variables de tipo entero//
+    char nombre[10];                                                                                        //variable de tipo cadena de caracteres//
+    float nivelHem, porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0;                                       //variables de tipo flotante//
+    printf("1.Mayor de edad\n2.Labratorio Clinico\n3.Voto Electoral\n");                                    //se imprime las opciones que existen//
+    printf("Escoja la opcion:");                                                                            //se ingresa la opcion//
+    scanf("%d",&op);                                                                                        //lee la opcion//
     fflush(stdin);
-    switch(op)
+    switch(op)                                                                                              //comienzo de los casos//
     {
-        case 1:
-        printf("Ingrese su nombre:");
-        gets(nombre);
-        printf("Ingrese su edad:");
-        scanf("%d",&edad);
-        if(edad>=18)
-            printf("%s Es mayor de edad", nombre);
-        else
-            printf("%s Es menor de edad", nombre);
+        case 1:                                                                                             //inicio caso 1//
+        printf("Ingrese su nombre:");                                                                       //se ingresa el nombre//
+        gets(nombre);                                                                                       //lee el nombre//
+        printf("Ingrese su edad:");                                                                         //se ingresa la edad//
+        scanf("%d",&edad);                                                                                  //lee la edad//
+        if(edad>=18)                                                                                        //sentencia if si la edad es mayor o igual de 18//
+            printf("%s Es mayor de edad", nombre);                                                          //se imprime el nombre y si es mayor de edad//
+        else                                                                                                //si no cumple la anterior condicion se realiza lo siguiente//
+            printf("%s Es menor de edad", nombre);                                                          //se imprime el nombre y si es menor de edad//
         
-        break;
-        case 2:
-        printf("Menu Principal\n1.Edad en meses\n2. Edad en años\n");
-        printf("Escoja la opcion:");
-        scanf("%d",&op);
-        if(op==1)
+        break;                                                                                              //fin caso 1//
+        case 2:                                                                                             //inicio caso 2//
+        printf("Menu Principal\n1.Edad en meses\n2. Edad en años\n");                                       //Se imprime el titulo MENU PRINCIPAL y las opciones que existe en el programa//
+        printf("Escoja la opcion:");                                                                        //se ingresa la opcion//
+        scanf("%d",&op);                                                                                    //lee la opcion//
+        if(op==1)                                                                                           //sentencia if si la opcion es igual a 1//
         {
-            printf("Ingrese la edad en meses:");
-            scanf("%d",&edad);
-            printf("Ingrese el nivel de Hemoglobina:");
-            scanf("%f",&nivelHem);
-            if(edad>=0 && edad<=1 && nivelHem>=13 && nivelHem<=26)
-                printf("No tiene anemia");
-            else if (edad>1 && edad<=6 && nivelHem>=10 && nivelHem<=18)
-                printf("No tiene anemia");
-            else if (edad>6 && edad<=12 && nivelHem>=11 && nivelHem<=15)
-                printf("No tiene anemia");
-            else
-            printf ("Tiene anemia");
+            printf("Ingrese la edad en meses:");                                                            //se ingresa la edad en meses de la persona//
+            scanf("%d",&edad);                                                                              //lee la edad en meses//
+            printf("Ingrese el nivel de Hemoglobina:");                                                     //se ingresa el nivel de hemoglobina//
+            scanf("%f",&nivelHem);                                                                          //lee el nivel de hemoglobina//
+            if(edad>=0 && edad<=1 && nivelHem>=13 && nivelHem<=26)                                          //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                                                  //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>1 && edad<=6 && nivelHem>=10 && nivelHem<=18)                                     //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                                                  //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>6 && edad<=12 && nivelHem>=11 && nivelHem<=15)                                    //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                                                  //si cumple las condiciones se imprime que no tiene anemia//
+            else                                                                                            //si no cumple ninguna de las anteriores condiciones se realiza la siguiente sentencia//
+                printf ("Tiene anemia");                                                                    //se imprime que tiene anemia//
         }
-        else if(op==2)
+        else if(op==2)                                                                                      //sentencia if si la opcion es igual a 2//
         {
-            printf("Ingrese la edad en años:");
-            scanf("%d",&edad);
-            printf("Ingrese el nivel de Hemoglobina:");
-            scanf("%f",&nivelHem);
-            if(edad>1 && edad<=5 && nivelHem>=11.5 && nivelHem<=15)
-                printf("No tiene anemia");
-            else if (edad>5 && edad<=10 && nivelHem>=12.6 && nivelHem<=15.5)
-                printf("No tiene anemia");
-            else if (edad>10 && edad<=15 && nivelHem>=13 && nivelHem<=15.5)
-                printf("No tiene anemia");
-            else
-                printf("Tiene anemia");
+            printf("Ingrese la edad en años:");                                                             //se ingresa la edad en años de la persona//
+            scanf("%d",&edad);                                                                              //lee la edad en años//
+            printf("Ingrese el nivel de Hemoglobina:");                                                     //se ingresa el nivel de hemoglobina//
+            scanf("%f",&nivelHem);                                                                          //lee el nivel de hemoglobina//
+            if(edad>1 && edad<=5 && nivelHem>=11.5 && nivelHem<=15)                                         //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                                                  //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>5 && edad<=10 && nivelHem>=12.6 && nivelHem<=15.5)                                //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                                                  //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>10 && edad<=15 && nivelHem>=13 && nivelHem<=15.5)                                 //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                                                  //si cumple las condiciones se imprime que no tiene anemia//
+            else                                                                                            //si no cumple ninguna de las anteriores condiciones se realiza la siguiente sentencia//
+                printf("Tiene anemia");                                                                     //se imprime que tiene anemia//
         }
         
-        break;
-        case 3:
-        printf ("Ingrese su voto:");
-        scanf("%d",&voto);
-        if(voto==1)
-            cantV1++;
-        else if(voto==2)
-            cantV2++;
-        else if(voto==3)
-            cantV3++;
-        else if(voto==4)
-            cantV4++;
-        else if(voto==5)
-            cantV5++;
+        break;                                                                                              //fin caso 2//
+        case 3:                                                                                             //inicio caso 3//
+        printf ("Ingrese su voto:");                                                                        //se ingresa el voto//
+        scanf("%d",&voto);                                                                                  //lee el voto//
+        if(voto==1)                                                                                         //si el voto es igual a 1 se realiza la siguiente sentencia//
+            cantV1++;                                                                                       //el contador de votos del Candidato 1 aumenta//
+        else if(voto==2)                                                                                    //si el voto es igual a 2 se realiza la siguiente sentencia//
+            cantV2++;                                                                                       //el contador de votos del Candidato 2 aumenta//
+        else if(voto==3)                                                                                    //si el voto es igual a 3 se realiza la siguiente sentencia//
+            cantV3++;                                                                                       //el contador de votos del Candidato 3 aumenta//
+        else if(voto==4)                                                                                    //si el voto es igual a 4 se realiza la siguiente sentencia//
+            cantV4++;                                                                                       //el contador de votos del Candidato 4 aumenta//
+        else if(voto==5)                                                                                    //si el voto es igual a 5 se realiza la siguiente sentencia//
+            cantV5++;                                                                                       //el contador de votos del Candidato 5 aumenta//
     
-        total=cantV1+cantV2+cantV3+cantV4+cantV5;
-        porcV1=(cantV1/total)*100;
-        porcV2=(cantV2/total)*100;
-        porcV3=(cantV3/total)*100;
-        porcV4=(cantV4/total)*100;
-        porcV5=(cantV5/total)*100;
+        total=cantV1+cantV2+cantV3+cantV4+cantV5;                                                           //formula para sacar el numero total de votos//
+        porcV1=(cantV1/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 1//
+        porcV2=(cantV2/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 2//
+        porcV3=(cantV3/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 3//
+        porcV4=(cantV4/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 4//
+        porcV5=(cantV5/total)*100;                                                                          //formula para sacar el porcentaje de votos del Candidato 5//
     
-        printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);
-        printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);
-        printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);
-        printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);
-        printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);
+        printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);       //se imprime el total de votos del Candidato 1 con su porcentaje//
+        printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);       //se imprime el total de votos del Candidato 2 con su porcentaje//
+        printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);       //se imprime el total de votos del Candidato 3 con su porcentaje//
+        printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);       //se imprime el total de votos del Candidato 4 con su porcentaje//
+        printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);       //se imprime el total de votos del Candidato 5 con su porcentaje//
         
-        break;
-        default:
-        printf("Opcon Invalida");
-        break;
+        break;                                                                                              //fin caso 3//
+        default:                                                                                            //si la opcion no existe se realiza lo siguiente//
+        printf("Opcon Invalida");                                                                           //se imprime que la opciomn es invalida//
+        break;                                                                                              //fin del menu//
     }
 }
