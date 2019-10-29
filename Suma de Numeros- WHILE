@@ -1,0 +1,20 @@
+/******************************************************************************
+Realizar un programa que genere la serie de n numeros enteros
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+void main()                                                                     //no se devuelve ningun valor//
+{
+    int num, cont=1, acum=0, numero;                                            //variables de tipo entero//
+    printf("Cuantos numeros va a generar:");                                    //se ingresa la cantidad de numeros que se va a generar//
+    scanf("%d",&num);                                                           //lee la cantidad de numeros//
+    while(cont<=num)                                                            //sentencia while se realiza lo siguiente sicumple que el contador es menor o igual a la cantidad de numeros//
+    {
+            printf("Ingrese el numero:");                                       //se ingresa el numero//
+            scanf("%d", &numero);                                               //lee el numero//
+            acum=acum+numero;                                                   //formula para sacar la sumatoria de todos los numeros//
+            cont++;                                                             //acumulador del contador//
+    }
+    printf("La suma de %d numeros es: %d", num, acum);                          //se imprime la cantidad de numeros y la suma total de los numeros//
+}
+
+
