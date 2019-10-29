@@ -1,5 +1,8 @@
-#include <stdio.h>
-void main()
+/******************************************************************************
+Hola Mundo
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye la libreria//
+void main()                                                                     //no se devuelve ningun valor//
 {
-  printf("Hola Mundo");
+  printf("Hola Mundo");                                                         //se imprime la frase Hola Mundo//
 }
