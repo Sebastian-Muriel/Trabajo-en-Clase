@@ -30,3 +30,4 @@ void main()                                                                     
         printf("\n");                                                           //se imprime los numeros//
         i++;                                                                    //aumenta el contador i//
     }
+}
