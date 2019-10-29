@@ -1,0 +1,32 @@
+/******************************************************************************
+Dada un numero entero menor o igual a 9 mostrar el siguiente diagrama: Ejemplo N = 5
+
+1
+
+12
+
+123
+
+1234
+
+12345
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+
+void main()                                                                     //no devuelve ningun valor//
+{
+    int num, i=1, j=0;                                                          //variables de tipo entero//
+    printf("Escriba un numero del 1 al 9:");                                    //se ingresa el numero//
+    scanf("%d", &num);                                                          //lee el numero//
+    printf("1\n");                                                              //se imprime los numeros//
+    while(i<num)                                                                //sentencia while se realiza la siguiente si cumple la condicion que el contador i sea menor a numero//
+    {
+        j=0;                                                                    //el contador j inicia en 0//
+        while(j<=i)                                                             //sentencia while se realiza la siguiente si cumple la condicion que el contador j sea menor o igual al contador i//
+        {
+            printf("%d", j+1);                                                  //se imprime los numeros//
+            j++;                                                                //aumenta el contador j//
+        }
+        printf("\n");                                                           //se imprime los numeros//
+        i++;                                                                    //aumenta el contador i//
+    }
