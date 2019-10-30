@@ -1,0 +1,24 @@
+/******************************************************************************
+Realizar un programa en C que determine el promedio de un estudiante con n notas
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+void main()                                                                     //no devuelve ningun valor//
+{
+    int nNotas, cont;                                                           //variables de tipo entero//
+    float notas, suma=0, prom=0;                                                //variables de tipo flotante//
+    printf("Ingrese el numero de notas:");                                      //se ingresa la cantidad de notas que se va a promediar//
+    scanf("%d", &nNotas);                                                       //lee la cantidad de notas que se va  a promediar//
+    for(cont=1; cont<=nNotas; cont++)                                           //sentencia for se realiza lo siguiente solamente si cumple que el contador es menor o igual a la cantidad de notas, el contador aumenta, inicio del contador en 1// //
+    {
+        printf("Ingrese la nota:");                                             //se ingresa las notas//
+        scanf("%f", &notas);                                                    //lee las notas//
+        suma=suma+notas;                                                        //formula para sacar la sumatoria de las notas//
+    }
+    prom=suma/nNotas;                                                           //formula para sacar el promedio del estudiante//
+    printf("El promedio del estudiante es: %.2f\n", prom);                      //se imprime el promedio del estudiante//
+    if(prom>=6)                                                                 //sentencia if con condicion que el promedi sea mayor o igual a 6//
+        printf("El estudiante aprueba");                                        //si cumple la condicion se imprime que el estudiante aprobo//
+    else                                                                        //si no cumple la condicion se realiza lo siguiente//
+        printf("El estudiante reprueba");                                       //se imprime que el estudiante reprobo//
+}
+
