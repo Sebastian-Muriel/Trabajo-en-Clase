@@ -1,0 +1,41 @@
+/******************************************************************************
+Realizar un programa en C que al recibir como datos un grupo de números naturales positivos,
+calcule el cuadrado de estos números. Imprima el cuadrado del número y al final la suma de
+los cuadrados.
+Datos: NUM1, NUM2, NUM3,..., 0
+Donde: NUMi es una variable de tipo entero que representa al número positivo i.
+El fin de los datos está dado por 0. (SENTENCIA DO WHILE)
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+#include <math.h>                                                               //se incluye a la libreria//
+void main()                                                                     //no devuelve ningun valor//
+{
+    int op, num=1, numCuad=0, suma=0;                                           //variables de tipo entero//
+    printf("\t\tMENU PRINCIPAL\n");                                               //imprime menu principal//
+    printf("1.cuadrado de numeros\n");                                          //opciones del menu//
+    printf("Escoja la opcion");                                                 //se escribe la opcion//
+    scanf("%d", &op);                                                           //lee la opcion//
+    switch (op)                                                                 //comienzo del menu//
+    {
+        case 1:                                                                 //comienzo caso 1/
+        printf("Ingrese el numero:");                                           //se ingresa el numero//
+        scanf("%d", &num);                                                      //lee el numero//
+        do                                                                      //sentencia do while//
+        {
+            if (num<0)                                                          //sentencia if si num menor a 0//                                            
+            printf("Ingrese el numero nuevamente:");                            //se escribe de nuevo el numero//
+            scanf("%d", &num);                                                  //se lee el numero//
+            numCuad=0;                                                          //el numero al cuadrado comienza en 0//
+            if(num>0)                                                           //sentencia if si numero mayor 0//
+                numCuad=pow(num, 2);                                            //formula para el numero al cuadrado//
+                suma=suma+numCuad;                                              //formula para la sumatoria//
+                printf("El numero: %d al cuadrado es: %d\n", num, numCuad);     //se imprime el numero y el cuadradoo deñl numero//
+        }while (num);                                                           //condiciion del do while//
+        printf("La suma de los numeros al cuadrado es: %d\n", suma);            //se imprime el resultado de la sumatoria//
+    
+        break;                                                                  //fin caso 1//
+        default:                                                                
+        printf("Opcion invalida");                          
+        break;
+    }
+}
