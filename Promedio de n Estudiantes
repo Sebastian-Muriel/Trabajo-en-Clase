@@ -1,0 +1,33 @@
+/******************************************************************************
+Realizar un programa en C que determine el promedio de n estudiantes con n notas
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+void main()                                                                     //no devuelve ningun valor//
+{                   
+    int nEst, cont=1, nNotas, cont1;                                            //variables de tipo entero//
+    float notas, suma=0, prom=0;                                                //variables de tipo flotante//
+    printf("Ingrese el numero de estudiantes:");                                //se ingresa la cantidad de estudiantes//
+    scanf("%d", &nEst);                                                         //lee la cantidad de estudiantes//
+    printf("Ingrese el numero de notas:");                                      //se ingresa la cantidad de notas que se va a promediar//
+    scanf("%d", &nNotas);                                                       //lee la cantidad de notas que se va  a promediar//
+    while(cont<=nEst)                                                           //sentencia while se realiza lo siguiente si cumple la condicion de que el contador es menor o igual a la cantidad de estudiantes//
+    {
+        cont1=1;                                                                //el contador 1 inicia en 1//
+        printf("Estudiante %d\n", cont);                                        //se imprime el numero de estudiante//
+        while(cont1<=nNotas)                                                    //sentencia while se realiza lo siguiente solamente si cumple que el contador 1 es menor o igual a la cantidad de notas//
+        {
+        printf("Ingrese la nota %d\n", cont1);                                  //se imprime el numero de nota que corresponde y se ingresa la nota//
+        scanf("%f", &notas);                                                    //lee las notas//
+        suma=suma+notas;                                                        //formula para sacar la sumatoria de todas las notas del estudiante//
+        cont1++;                                                                //aumenta el contador 1//
+        }
+        prom=suma/nNotas;                                                       //formula para sacar el promedio del estudiante//
+        suma=0;                                                                 //la suma vuelve a inicialiazar en 0//
+        printf("El promedio del estudiante es: %.2f\n", prom);                  //se imprime el promedio del estudiante//
+        if(prom>=6)                                                             //sentencia if con condicion que el promedi sea mayor o igual a 6//
+            printf("El estudiante aprueba");                                    //si cumple la condicion se imprime que el estudiante aprobo//
+        else                                                                    //si no cumple la condicion se realiza lo siguiente//
+            printf("El estudiante reprueba");                                   //se imprime que el estudiante reprobo//
+        cont++;                                                                 //aumenta el contador//
+    }
+}
