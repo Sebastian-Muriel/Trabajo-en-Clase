@@ -1,0 +1,545 @@
+/******************************************************************************
+Realizar un menu con todos los programas
+*******************************************************************************/
+#include <stdio.h>                                                              //se incluye a la libreria//
+#include <math.h>                                                               //se incluye a la libreria//
+#define pi 3.1416                                                               //se declara a la variable como definida//
+#define tarHoras 40                                                             //se declara a la variable como definida//
+void main ()                                                                    //no devuelve ningun valor//
+{
+    char nombre[10], desP1[10], desP2[10];                                      //variables que se va a utilizar de tipo cadenas de caracteres//
+    int op, cedula, edad, voto, cantV1=0, cantV2=0, cantV3=0, cantV4=0, cantV5=0, horas, num, cont=1, i=1, j=0, suma=0, nume=1, cantNum, acum=0, numero, tabla, lim, mult=0, nNotas, conta, nEst, cont1, numCuad=0;                             //variables que se va a utilizar de tipo entero//
+    float cantP1, cantP2, precioP1, precioP2, pVtaP1, pVtaP2, subtotal=0, iva, total=0, radio, area=0, cent, far, gradosCent=0, gradosFar=0, porcV1=0, porcV2=0, porcV3=0, porcV4=0, porcV5=0, nivelHem, salBruto=0, salNeto=0, imp25=0, imp45=0, base, alt,x1=0, x2=0, a, b, c, notas, sum=0, prom=0;      //variables que se va a utilizar de tipo flotante//    
+    double fact=1;                                                              //variables de tipo double//
+        printf("\t\t\t\tMENU PRINCIPAL\n");                                     //se imprime el titulo MENU PRINCIPAL//
+        printf("1.Factura\n2.Area de un Circulo\n3.Hola Mundo con Asteriscos\n4.Persona-Edad\n5.Conversion de Temperatura\n6.Voto Electoral\n7.Labratorio Clinico\n8.Salario\n9.Ecuacion Cuadratica y Area de un Triangulo\10.Hola Mundo\n11.Numero Factorial\n12.Diagrama de Numeros\n13.Suma de Numeros Positivos\n14.Numeros Par e Impar\n15.Suma de Numeros Enteros\n16.Suma de Numeros\n17.Tabla de Multiplicar\n18.Promedio\n19.Numeros al Cuadrado\n");      //se imprime las opciones que existen//
+        printf("Escoja la opcion:");                                            //se ingresa la opcion//
+        scanf("%d",&op);                                                        //lee la opcion//
+        switch(op)                                                              //comienzo de los casos//
+        {
+            case 1:                                                             //inicio del caso 1//
+            printf ("Ingrese el nombre del cliente:");                          //se ingresa el nombre//
+            scanf ("%s", &nombre);                                              //lee el nombre//
+            printf ("Ingrese la cedula:");                                      //se Ingresa la cedula//
+            scanf ("%d", &cedula);                                              //lee la cedula//
+            printf ("Datos del Producto1\n");                                   //se imprime la frase datos del producto 1// 
+            printf ("Ingrese la descripcion:");                                 //se ingresa el producto 1//
+            scanf ("%s", &desP1);                                               //lee el producto 1//
+            printf ("Ingrese la cantidad:");                                    //se ingresa la cantidad del producto 1//
+            scanf ("%f", &cantP1);                                              //lee la cantidad del producto 1//
+            printf ("Ingrese el precio:");                                      //se ingresa el precio del producto 1//
+            scanf ("%f", &precioP1);                                            //lee el precio del producto 1//
+            printf ("Datos del Producto2\n");                                   //se imprime la frase datos del producto 2//
+            printf ("Ingrese la descripcion:");                                 //se ingresa el producto 2//
+            scanf ("%s", &desP2);                                               //lee el producto 2//
+            printf ("Ingrese la cantidad:");                                    //se ingresa la cantidad del producto 2//
+            scanf ("%f", &cantP2);                                              //lee la cantidad del producto 2//
+            printf ("Ingrese el precio:");                                      //se ingresa el precio del producto 2//
+            scanf ("%f", &precioP2);                                            //lee el precio del producto 2//
+            pVtaP1 = cantP1 * precioP1;                                         //formula para sacar el precio de venta del prodcuto 1//
+            pVtaP2 = cantP2 * precioP2;                                         //formula para sacar el precio de venta del prodcuto 2//
+            subtotal = pVtaP1 + pVtaP2;                                         //formula para sacar el subtotal de la compra//
+            iva = subtotal * 0.12;                                              //formula para sacar el iva de la compra//
+            total = subtotal + iva;                                             //formula para sacar el precio total de la compra// 
+            printf ("\t\t******FACTURA******\n");                               //se imprime el titulo FACTURA//
+            printf ("Cliente: %s\n", nombre);                                   //se imprime el nombre del cliente//
+            printf ("Cedula:%d\n", cedula);                                     //se imprime la cedula del cliente//
+            printf ("Descripcion\tCantidad\tPrecio\tPVta\n");                   //se imprime los terminos: Descripcion, Cantidad, Precio, PVta//
+            printf ("%s\t\t%.2f\t\t%.2f\t%.2f\n", desP1, cantP1, precioP1, pVtaP1);         //se imprime la Descripcion, Cantidad, Precio, PVta del producto 1//
+            printf ("%s\t%.2f\t\t%.2f\t%.2f\n", desP2, cantP2, precioP2, pVtaP2);           //se imprime la Descripcion, Cantidad, Precio, PVta del producto2//
+            printf ("\t\t\tSubtotal:\t%.2f\n", subtotal);                                   //se imprime el subtotal de la compra//
+            printf("\t\t\tIva:\t\t%.2f\n",iva);                                             //se imprime el iva de la compra//
+            printf("\t\t\tTotal:\t\t%.2f\n",total);                                         //se imprime el precio total de la compra//
+            
+            break;                                                              //fin caso 1//
+            case 2:                                                             //inicio caso 2//
+            printf("Ingrese el radio");                                         //se ingresa el valor del radio//
+            scanf("%f", &radio);                                                //lee el valor del radio//
+            area=pi*radio*radio;                                                //formula para sacar el area del circulo//
+            printf("El area es:%.2f", area);                                    //se imprime el area del circulo//
+            
+            break;                                                              //fin caso 2//
+            case 3:                                                             //inicio caso 3//
+            printf("*  *\t****\t*   \t****\t\t**   **\t*  *\t*   *\t*** \t****\n");         //con printf se imprimio la frase "HOLA MUNDO"//
+            printf("*  *\t*  *\t*   \t*  *\t\t* * * *\t*  *\t**  *\t*  *\t*  *\n");
+            printf("****\t*  *\t*   \t****\t\t*  *  *\t*  *\t* * *\t*  *\t*  *\n");
+            printf("*  *\t*  *\t*   \t*  *\t\t*     *\t*  *\t*  **\t*  *\t*  *\n");
+            printf("*  *\t****\t****\t*  *\t\t*     *\t****\t*   *\t*** \t****\n");
+            
+            break;                                                              //fin caso 3//
+            case 4:                                                             //inicio caso 4//
+            printf("Ingrese su nombre");                                        //se ingresa el nombre//
+            scanf("%s", nombre);                                                //lee el nombre//
+            printf("Ingrese su edad");                                          //se ingresa la edad//
+            scanf("%d",&edad);                                                  //lee la edad//
+            if(edad>=18)                                                        //sentencia if si la edad es mayor o igual de 18//
+                printf("%s Es mayor de edad", nombre);                          //se imprime el nombre y si es mayor de edad//
+            else                                                                //si no cumple la anterior condicion se realiza lo siguiente//
+                printf("%s Es menor de edad", nombre);                          //se imprime el nombre y si es menor de edad//
+                
+            break;                                                              //fin caso 4//
+            case 5:                                                             //inicio caso 5//
+            printf("\t\t\t\tMenu Principal\n1.Grados Centigrados a Farenheit\n2.Grados Fahrenheit a Centigrados\n");        //se imprime las distintas opciones que hay en el programa//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d",&op);                                                    //lee la opcion//
+            if(op==1)                                                           //sentencia if si la opcion esigual a 1//
+            {
+                printf("Ingrese los grados Centigrados");                       //se ingresa los grados centigrados//
+                scanf("%f", &cent);                                             //lee los grados centigrados//
+                gradosFar=((cent*9)/5)+32;                                      //formula para sacar los grados Centigrados en grados Fahrenheit//
+                printf("Grados Fahrenheit=%.2f\n", gradosFar);                  //se imprime los grados Fahrenheit//
+    
+            }
+            else if (op==2)                                                     //si la opcion es diferente a uno se realiza las siguientes sentencias//
+            {
+                printf("Ingrese los grados Fahrenheit");                        //se ingresa los grados Fahrenheit//
+                scanf("%f", &far);                                              //lee los grados Fahrenheit//
+                gradosCent=((far-32)*5)/9;                                      //formula para sacar los grados Fahrenheit en grados Centigrados//
+                printf("Grados Centigrados=%.2f", gradosCent);                  //se imprime los grados Centigrados//
+            }
+            else                                                                //si no cumple ninguna de las anteriores condiciones se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opcion es incorrecta//
+            
+            break;                                                              //fin caso 5//
+            case 6:                                                             //inicio caso 6//
+            printf ("Ingrese su voto:");                                        //se ingresa el voto//
+            scanf("%d",&voto);                                                  //lee el voto//
+            if(voto==1)                                                         //si el voto es igual a 1 se realiza la siguiente sentencia//
+                cantV1++;                                                       //el contador de votos del Candidato 1 aumenta//
+            else if(voto==2)                                                    //si el voto es igual a 2 se realiza la siguiente sentencia//
+                cantV2++;                                                       //el contador de votos del Candidato 2 aumenta//
+            else if(voto==3)                                                    //si el voto es igual a 3 se realiza la siguiente sentencia//
+                cantV3++;                                                       //el contador de votos del Candidato 3 aumenta//
+            else if(voto==4)                                                    //si el voto es igual a 4 se realiza la siguiente sentencia//
+                cantV4++;                                                       //el contador de votos del Candidato 4 aumenta//
+            else if(voto==5)                                                    //si el voto es igual a 5 se realiza la siguiente sentencia//
+                cantV5++;                                                       //el contador de votos del Candidato 5 aumenta//
+    
+            total=cantV1+cantV2+cantV3+cantV4+cantV5;                           //formula para sacar el numero total de votos//
+            porcV1=(cantV1/total)*100;                                          //formula para sacar el porcentaje de votos del Candidato 1//
+            porcV2=(cantV2/total)*100;                                          //formula para sacar el porcentaje de votos del Candidato 2//
+            porcV3=(cantV3/total)*100;                                          //formula para sacar el porcentaje de votos del Candidato 3//
+            porcV4=(cantV4/total)*100;                                          //formula para sacar el porcentaje de votos del Candidato 4//
+            porcV5=(cantV5/total)*100;                                          //formula para sacar el porcentaje de votos del Candidato 5//
+    
+            printf("total de Votos del Candidato 1 es: %d tiene un porcetaje de %.2f\n", cantV1, porcV1);       //se imprime el total de votos del Candidato 1 con su porcentaje//
+            printf("total de Votos del Candidato 2 es: %d tiene un porcetaje de %.2f\n", cantV2, porcV2);       //se imprime el total de votos del Candidato 2 con su porcentaje//
+            printf("total de Votos del Candidato 3 es: %d tiene un porcetaje de %.2f\n", cantV3, porcV3);       //se imprime el total de votos del Candidato 3 con su porcentaje//
+            printf("total de Votos del Candidato 4 es: %d tiene un porcetaje de %.2f\n", cantV4, porcV4);       //se imprime el total de votos del Candidato 4 con su porcentaje//
+            printf("total de Votos del Candidato 5 es: %d tiene un porcetaje de %.2f\n", cantV5, porcV5);       //se imprime el total de votos del Candidato 5 con su porcentaje//
+            
+            break;                                                              //fin caso 6//
+            case 7:                                                             //inicio caso 7//
+            printf("\t\t\t\tMenu Principal\n1.Edad en meses\n2. Edad en años\n");       //Se imprime el titulo MENU PRINCIPAL y las opciones que existe en el programa//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d",&op);                                                    //lee la opcion//
+            if(op==1)                                                           //sentencia if si la opcion es igual a 1//
+            {
+            printf("Ingrese la edad en meses:");                                //se ingresa la edad en meses de la persona//
+            scanf("%d",&edad);                                                  //lee la edad en meses//
+            printf("Ingrese el nivel de Hemoglobina:");                         //se ingresa el nivel de hemoglobina//
+            scanf("%f",&nivelHem);                                              //lee el nivel de hemoglobina//
+            if(edad>=0 && edad<=1 && nivelHem>=13 && nivelHem<=26)              //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                      //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>1 && edad<=6 && nivelHem>=10 && nivelHem<=18)         //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                      //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>6 && edad<=12 && nivelHem>=11 && nivelHem<=15)        //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                      //si cumple las condiciones se imprime que no tiene anemia//
+            else                                                                //si no cumple ninguna de las anteriores condiciones se realiza la siguiente sentencia//
+            printf ("Tiene anemia");                                            //se imprime que tiene anemia//
+            }
+            else if(op==2)                                                      //si la opcion es diferente a 1 se realiza las siguientes sentencias//
+            {
+            printf("Ingrese la edad en años:");                                 //se ingresa la edad en años de la persona//
+            scanf("%d",&edad);                                                  //lee la edad en años//
+            printf("Ingrese el nivel de Hemoglobina:");                         //se ingresa el nivel de hemoglobina//
+            scanf("%f",&nivelHem);                                              //lee el nivel de hemoglobina//
+            if(edad>1 && edad<=5 && nivelHem>=11.5 && nivelHem<=15)             //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                      //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>5 && edad<=10 && nivelHem>=12.6 && nivelHem<=15.5)    //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+                printf("No tiene anemia");                                      //si cumple las condiciones se imprime que no tiene anemia//
+            else if (edad>10 && edad<=15 && nivelHem>=13 && nivelHem<=15.5)     //sentencia if para medir si tiene o no anemia segun la edad y el nivel de hemoglobina//
+               printf("No tiene anemia");                                       //si cumple las condiciones se imprime que no tiene anemia//
+            else                                                                //si no cumple ninguna de las anteriores condiciones se realiza la siguiente sentencia//
+            printf("Tiene anemia");                                             //se imprime que tiene anemia//
+            }
+            else                                                                //si no cumple ninguna de las anteriores condiciones se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opcion es incorrecta//
+            
+            break;                                                              //fin caso 7//
+            case 8:                                                             //inicio caso 8//
+            printf("Ingrese numero de horas:");                                 //se ingresa el numero de horas//
+            scanf("%d", &horas);                                                //lee el numero de horas//
+            if (horas<=35)                                                      //sentencia if con condicion si las horas son menores o igual a 35//
+            {
+                salBruto=horas*tarHoras;                                        //formula para sacar el salario bruto//
+                if (salBruto<=1000)                                             //sentencia if con condicion si el salario bruto es menor o igual a 1000//
+                {
+                    salNeto=salBruto;                                           //formula para sacar el salario neto//
+                }
+                else if (salBruto>1000 && salBruto<1500)                        //si no cumple la anterior condicion se aplica la siguiente condicion si el salario bruto es mayor a 1000 y menor a 1500//
+                {
+                    imp25=salBruto*0.25;                                        //formula para sacar el impuesto del 25%//
+                    salNeto=salBruto-imp25;                                     //formula para sacar el salario neto//
+                }
+                else if (salBruto>=1500)                                        //si no cumple ninguna de las anteriores condiciones se aplica la siguiente condicion si el salario bruto es mayor o igual a 1500//
+                {
+                    imp45=salBruto*0.45;                                        //formula para sacar el impuesto del 45%//
+                    salNeto=salBruto-imp45;                                     //formula para sacar el salario neto//
+                }
+                printf("El salario bruto es: %2.f\n", salBruto);                //se imprime el salario bruto//
+                printf("El impuesto a pagar es: %2.f\n", imp25);                //se imprime el impuesto de 25%//
+                printf("El impuesto a pagar es: %2.f\n", imp45);                //se imprime el impuesto de 45%//
+                printf("El salario neto es: %2.f", salNeto);                    //se imprime el salario neto//
+            }
+        
+            else                                                                //si no cumple la anterior condicion de numeros de horas menores o igual a 35 se realiza la siguiente sentencia//
+            {
+                salBruto=horas*tarHoras*1.5;                                    //formula para sacar el salario bruto//
+                if (salBruto<=1000)                                             //sentencia if con condicion si el salario bruto es menor o igual a 1000//
+                {
+                    salNeto=salBruto;                                           //formula para sacar el salario neto//
+                }
+                else if (salBruto>1000 && salBruto<1500)                        //si no cumple la anterior condicion se aplica la siguiente condicion si el salario bruto es mayor a 1000 y menor a 1500//
+                {
+                    imp25=salBruto*0.25;                                        //formula para sacar el impuesto del 25%//
+                    salNeto=salBruto-imp25;                                     //formula para sacar el salario neto//
+                }
+                else if (salBruto>=1500)                                        //si no cumple ninguna de las anteriores condiciones se aplica la siguiente condicion si el salario bruto es mayor o igual a 1500//
+                {
+                    imp45=salBruto*0.45;                                        //formula para sacar el impuesto del 45%//
+                    salNeto=salBruto-imp45;                                     //formula para sacar el salario neto//
+                }
+                printf("El salario bruto es: %2.f\n", salBruto);                //se imprime el salario bruto//
+                printf("El impuesto a pagar es: %2.f\n", imp25);                //se imprime el impuesto de 25%//
+                printf("El impuesto a pagar es: %2.f\n", imp45);                //se imprime el impuesto de 45%//
+                printf("El salario neto es: %2.f", salNeto);                    //se imprime el salario neto//
+            }
+            
+            break;                                                              //fin caso 8//
+            case 9:                                                             //inicio caso 9//
+            printf("\t\t\t\tMenu Princincipal\n1.Ecuacion Cuadratica\n2.Area de un Triangulo\n");       //se imprime el titulo MENU PRINCIPAL y sus opciones//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d", &op);                                                   //lee la opcion//
+            switch(op)                                                          //comienzo de los casos//
+            {
+                case 1:                                                         //inicio caso 1//
+                    printf("Ingrese el coeficiente a:");                        //se ingresa el coeficiente de a//
+                    scanf("%f", &a);                                            //lee el coeficiente de a//
+                    printf("Ingrese el coeficiente b:");                        //se ingresa el coeficiente de b//                                        
+                    scanf("%f", &b);                                            //lee el coeficiente de b//
+                    printf("Ingrese el coeficiente c:");                        //se ingresa el coeficiente de c// 
+                    scanf("%f", &c);                                            //lee el coeficiente de c//
+                    x1=((-b+sqrt(pow(b,2)-4*a*c))/2*a);                         //formula para sacar el valor de x1//                             
+                    x2=((-b-sqrt(pow(b,2)-4*a*c))/2*a);                         //formula para sacar el valor de x2//
+                    printf("El resultado de x1 es:%f\n", x1);                   //se imprime el valor de x1//
+                    printf("El resultado de x2 es:%f\n", x2);                   //se imprime el valor de x2//
+            
+                break;                                                          //fin caso 1//
+                case 2:                                                         //inicio caso 2//
+                    printf("Ingrese la base:");                                 //se ingresa el valor de la base//
+                    scanf("%f", &base);                                         //lee el valor de la base//
+                    printf("Ingrese la altura:");                               //se ingresa el valor de la altura//
+                    scanf("%f", &alt);                                          //lee el valor de la altura//
+                    area=(base*alt)/2;                                          //formula para sacar el area de un triangulo//
+                    printf("El area del triangulo es: %2.f", area);             //se imprime el valor del area//
+                
+                break;                                                          //fin caso 2//
+                default:                                                        //si la opcion no existe se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opciomn es invalida//
+                break;                                                          //fin del menu//
+            }
+            
+            break;                                                              //fin del caso 9//
+            case 10:                                                            //inicio caso 10//
+            printf("Hola Mundo");                                               //se imprime la frase Hola Mundo//
+            
+            break;                                                              //fin caso 10//
+            case 11:                                                            //inicio caso 11//
+            printf("Escriba el numero:");                                       //se ingresa el numero//
+            scanf("%d", &num);                                                  //lee el numero//
+            for (cont=1; cont<=num; cont++)                                     //sentencia for, se realiza la siguiente sentencia si cumple la condicion contador menor o igual al numero//
+                fact*=cont;                                                     //formula para sacar el factorial del numero//
+                printf ("El factorial de %d es: %.0lf", num, fact);             //se imprime el resultado del numero factorial//
+            
+            break;                                                              //fin caso 11//
+            case 12:                                                            //inicio caso 12//
+            printf("Escriba un numero del 1 al 9:");                            //se ingresa el numero//
+            scanf("%d", &num);                                                  //lee el numero//
+            printf("1\n");                                                      //se imprime los numeros//
+            while(i<num)                                                        //sentencia while se realiza la siguiente si cumple la condicion que el contador i sea menor a numero//
+            {
+                j=0;                                                            //el contador j inicia en 0//
+                while(j<=i)                                                     //sentencia while se realiza la siguiente si cumple la condicion que el contador j sea menor o igual al contador i//
+                {
+                    printf("%d", j+1);                                          //se imprime los numeros//
+                    j++;                                                        //aumenta el contador j//
+                }
+                printf("\n");                                                   //se imprime los numeros//
+                i++;                                                            //aumenta el contador i//
+            }
+            
+            break;                                                              //fin caso 12//
+            case 13:                                                            //inicio caso 13//
+            while (num>=1)                                                      //sentencia while si cumple la condicion de que el numero sea mayor o igual a 1 se realiza lo siguiente//
+            {
+                printf("Ingrese el numero:");                                   //se ingresa el numero//
+                scanf("%d", &num);                                              //lee el numero//
+                if(num>0)                                                       //sentencia if si el numero es mayor a cero se realiza lo siguiente//
+                    suma=num+suma;                                              //formula para sacar la suma total de todos los numeros positivos//
+            }
+            printf("La suma de los numeros positivos es: %d", suma);            //se imprime el resultado de la suma//
+            
+            break;                                                              //fin caso 13//
+            case 14:                                                            //inicio caso 14//
+            printf("\t\t\t\tMenu Princincipal\n1.Centinela\n2.Contador\n");     //se imprime el titulo MENU PRINCIPAL y sus opciones//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d", &op);                                                   //lee la opcion//
+            switch(op)                                                          //comienzo de los casos//
+            {
+                case 1:                                                         //inicio caso 1//
+                while (nume>=1)                                                 //sentencia while se realiza las siguientes sentencias si cumple que el contador sea menor o igual a la cantidad de numeros//
+                {
+                    printf("Ingrese el numero:");                               //se ingresa el numero//
+                    scanf("%d", &nume);                                         //lee el numero//
+                    while(nume<0)                                               //sentencia while se realiza lo siguiente si cumple que el numero sea menor o igual a 0//
+                    {
+                        printf("Ingrese un numero positivo:");                  //se ingresa nuevamente el numero//
+                        scanf("%d", &nume);                                     //lee el numero//
+                    }
+                    if(nume%2==0)                                               //sentencia if se realiza lo siguiente solo si el residuo de la division para 2 es 0//
+                        printf("Par\n");                                        //se imprime que el numero es par//
+                    else                                                        //si no cumple la condicion se realiza lo siguiente//
+                        printf("Impar\n");                                      //se imprime que el numwero es impar//
+                }
+                
+                break;                                                          //fin caso 1//
+                case 2:                                                         //inicio caso 2//
+                printf("Cuantos numeros va ingresar:");                         //se ingresa la cantidad de numeros//
+                scanf("%d", &cantNum);                                          //lee la cantidad de numeros//
+                while (cont<=cantNum)                                           //sentencia while se realiza las siguientes sentencias si cumple que el contador sea menor o igual a la cantidad de numeros//
+                {
+                    printf("Ingrese el numero:");                               //se ingresa el numero//
+                    scanf("%d", &num);                                          //lee el numero//
+                    while(num<=0)                                               //sentencia while se realiza lo siguiente si cumple que el numero sea menor o igual a 0//
+                    {
+                        printf("Ingrese un numero positivo:");                  //se ingresa nuevamente el numero//
+                        scanf("%d", &num);                                      //lee el numero//
+            
+                    }
+                    if(num%2==0)                                                //sentencia if se realiza lo siguiente solo si el residuo de la division para 2 es 0//
+                        printf("Par\n");                                        //se imprime que el numero es par//
+                    else                                                        //si no cumple la condicion se realiza lo siguiente//
+                        printf("Impar\n");                                      //se imprime que el numwero es impar//
+                    cont++;                                                     //el contador aumenta//
+                }
+                
+                break;                                                          //fin caso 2//
+                default:                                                        //si la opcion no existe se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opciomn es invalida//
+                break;                                                          //fin del menu//
+            }
+            
+            break;                                                              //fin caso 14//
+            case 15:                                                            //inicio caso 15//
+            printf("\t\t\t\tMenu Princincipal\n1.FOR\n2.DO-WHILE\n3.WHILE\n");      //se imprime el titulo MENU PRINCIPAL y sus opciones//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d", &op);                                                   //lee la opcion//
+            switch(op)                                                          //comienzo de los casos//
+            {
+                case 1:                                                         //inicio caso 1//
+                printf("Cuantos numeros va a generar:");                        //se ingresa la cantidad de numeros que se va a ingresar//
+                scanf("%d",&num);                                               //lee la cantidad//
+                for(;cont<=num;)                                                //sentencia for se realiza lo siguiente si cumple que el contador es menor o igual al numero//
+                {
+                    acum=acum+cont;                                             //formula para sacar la sumatoria de todos los numeros de la serie//
+                    printf("%d\n", cont);                                       //se imprime el nuevo numero//
+                    cont++;                                                     //acumulador del contador//
+                }
+                printf("La suma de %d numeros es: %d", num, acum);              //se imprime el resultado de la sumatoria de todos los numeros//
+                
+                break;                                                          //fin caso 1//
+                case 2:                                                         //inicio caso 2//
+                printf("Cuantos numeros va a generar:");                        //se ingresa la cantidad de numeros que se va a ingresar//
+                scanf("%d",&num);                                               //lee la cantidad//
+                do                                                              //comienzo de la sentencia do-while//
+                {
+                    acum=acum+cont;                                             //formula para sacar la sumatoria de todos los numeros de la serie//
+                    printf("%d\n", cont);                                       //se imprime el nuevo numero//
+                    cont++;                                                     //acumulador del contador//
+                }while (cont<=num);                                             //condicion de la sentencia do-while, se realiza si cumple que el contador es menor o igual al numero//
+                printf("La suma de %d numeros es: %d", num, acum);              //se imprime el resultado de la sumatoria de todos los numeros//
+                
+                break;                                                          //fin caso 2//
+                case 3:                                                         //inicio caso 3//
+                printf("Cuantos numeros va a generar:");                        //se ingresa la cantidad de numeros que se va a ingresar//
+                scanf("%d",&num);                                               //lee la cantidad//
+                while (cont<=num)                                               //sentencia while se realiza lo siguiente si cumple que el contador es menor o igual al numero//
+                {
+                    acum=acum+cont;                                             //formula para sacar la sumatoria de todos los numeros de la serie//
+                    printf("%d\n", cont);                                       //se imprime el nuevo numero//
+                    cont++;                                                     //acumulador del contador//
+                }
+                printf("La suma de %d numeros es: %d", num, acum);              //se imprime el resultado de la sumatoria de todos los numeros//
+                
+                break;                                                          //fin caso 3//
+                default:                                                        //si la opcion no existe se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opciomn es invalida//
+                break;                                                          //fin del menu//
+            }
+            
+            break;                                                              //fin caso 15//
+            case 16:                                                            //inicio caso 16//
+            printf("\t\t\t\tMenu Princincipal\n1.FOR\n2.WHILE\n");              //se imprime el titulo MENU PRINCIPAL y sus opciones//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d", &op);                                                   //lee la opcion//
+            switch(op)                                                          //comienzo de los casos//
+            {
+                case 1:                                                         //inicio caso 1//
+                printf("Cuantos numeros va a generar:");                        //se ingresa la cantidad de numeros que se va a generar//
+                scanf("%d",&num);                                               //lee la cantidad de numeros//
+                for(cont=1; cont<=num; cont++)                                  //sentencia for se realiza lo siguiente si cumple que el contador es menor o igual a la cantidad de numeros//
+                {
+                    printf("Ingrese el numero:");                               //se ingresa el numero//
+                    scanf("%d", &numero);                                       //lee el numero//
+                    acum=acum+numero;                                           //formula para sacar la sumatoria de todos los numeros//
+            
+                }
+                printf("La suma de %d numeros es: %d", num, acum);              //se imprime la cantidad de numeros que se ingreso y la suma total de dichos numeros//
+                
+                break;                                                          //fin caso 1//
+                case 2:                                                         //inicio caso 2//
+                printf("Cuantos numeros va a generar:");                        //se ingresa la cantidad de numeros que se va a generar//
+                scanf("%d",&num);                                               //lee la cantidad de numeros//
+                while(cont<=num)                                                //sentencia while se realiza lo siguiente sicumple que el contador es menor o igual a la cantidad de numeros//
+                {
+                    printf("Ingrese el numero:");                               //se ingresa el numero//
+                    scanf("%d", &numero);                                       //lee el numero//
+                    acum=acum+numero;                                           //formula para sacar la sumatoria de todos los numeros//
+                    cont++;                                                     //acumulador del contador//
+                }
+                printf("La suma de %d numeros es: %d", num, acum);              //se imprime la cantidad de numeros y la suma total de los numeros//
+                
+                break;                                                          //fin caso 2//
+                default:                                                        //si la opcion no existe se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opciomn es invalida//
+                break;                                                          //fin del menu//
+            }
+            
+            break;                                                              //fin caso 16//
+            case 17:                                                            //inicio caso 17//
+            printf("\t\t\t\tMenu Princincipal\n1.DO-WHILE\n2.WHILE\n");         //se imprime el titulo MENU PRINCIPAL y sus opciones//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d", &op);                                                   //lee la opcion//
+            switch(op)                                                          //comienzo de los casos//
+            {
+                case 1:                                                         //inicio caso 1//
+                printf("Ingrese el limite:");                                   //se ingresa hasta que numero se va a multiplicar//
+                scanf("%d",&lim);                                               //lee el numero hasta cual se va a multiplicar//
+                printf("Ingrese la tabla de multiplicar:");                     //se ingresa el numero con el cual se va a realizar la tabla de multiplicar//
+                scanf("%d",&tabla);                                             //lee el numero con el que se va a realizar la tabla de multiplicar//
+                do                                                              //comienzo sentencia do-while//
+                {
+                    mult=tabla*cont;                                            //formula para sacar el resultado de la tabla de multiplicar//
+                    printf("%dX%d=%d\n", tabla, cont, mult);                    //se imprime la tabla de multiplicar//
+                    cont++;                                                     //acumulador del contador//
+                }while(cont<=lim);                                              //se realiza la sentencia do-while si cumple que el contador sea menor o igual al numero limite de la tabla de multiplicar//
+                
+                break;                                                          //fin caso 1//
+                case 2:                                                         //inicio caso 2//
+                printf("Ingrese el limite:");                                   //se ingresa hasta que numero se va a multiplicar//
+                scanf("%d",&lim);                                               //lee el numero hasta cual se va a multiplicar//
+                printf("Ingrese la tabla de multiplicar:");                     //se ingresa el numero con el cual se va a realizar la tabla de multiplicar//
+                scanf("%d",&tabla);                                             //lee el numero con el que se va a realizar la tabla de multiplicar//
+                while(cont<=lim)                                                //sentencia while se realiza lo siguiente si cumple que el contador sea menor o igual al numero limite de la tabla de multiplicar//
+                {
+                    mult=tabla*cont;                                            //formula para sacar el resultado de la tabla de multiplicar//
+                    printf("%dX%d=%d\n", tabla, cont, mult);                    //se imprime la tabla de multiplicar//
+                    cont++;                                                     //acumulador del contador//
+                }
+                
+                break;                                                          //fin caso 2//
+                default:                                                        //si la opcion no existe se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opciomn es invalida//
+                break;                                                          //fin del menu//
+            }
+            
+            break;                                                              //fin caso 17//
+            case 18:                                                            //inicio caso 17//
+            printf("\t\t\t\tMenu Princincipal\n1.Promedio de Notas\n2.Promedio de n Estudiantes\n");        //se imprime el titulo MENU PRINCIPAL y sus opciones//
+            printf("Escoja la opcion:");                                        //se ingresa la opcion//
+            scanf("%d", &op);                                                   //lee la opcion//
+            switch(op)                                                          //comienzo de los casos//
+            {
+                case 1:                                                         //inicio caso 1//
+                printf("Ingrese el numero de notas:");                          //se ingresa la cantidad de notas que se va a promediar//
+                scanf("%d", &nNotas);                                           //lee la cantidad de notas que se va  a promediar//
+                for(conta=1; conta<=nNotas; conta++)                            //sentencia for se realiza lo siguiente solamente si cumple que el contador es menor o igual a la cantidad de notas, el contador aumenta, inicio del contador en 1//
+                {
+                    printf("Ingrese la nota:");                                 //se ingresa las notas//
+                    scanf("%f", &notas);                                        //lee las notas//
+                    sum=sum+notas;                                              //formula para sacar la sumatoria de las notas//
+                }
+                prom=sum/nNotas;                                                //formula para sacar el promedio del estudiante//
+                printf("El promedio del estudiante es: %.2f\n", prom);          //se imprime el promedio del estudiante//
+                if(prom>=6)                                                     //sentencia if con condicion que el promedi sea mayor o igual a 6//
+                    printf("El estudiante aprueba");                            //si cumple la condicion se imprime que el estudiante aprobo//
+                else                                                            //si no cumple la condicion se realiza lo siguiente//
+                    printf("El estudiante reprueba");                           //se imprime que el estudiante reprobo//
+                    
+                break;                                                          //fin caso 1//
+                case 2:                                                         //inicio caso 2//
+                printf("Ingrese el numero de estudiantes:");                    //se ingresa la cantidad de estudiantes//
+                scanf("%d", &nEst);                                             //lee la cantidad de estudiantes//
+                printf("Ingrese el numero de notas:");                          //se ingresa la cantidad de notas que se va a promediar//
+                scanf("%d", &nNotas);                                           //lee la cantidad de notas que se va  a promediar//
+                while(cont<=nEst)                                               //sentencia while se realiza lo siguiente si cumple la condicion de que el contador es menor o igual a la cantidad de estudiantes//
+                {
+                    cont1=1;                                                    //el contador 1 inicia en 1//
+                    printf("Estudiante %d\n", cont);                            //se imprime el numero de estudiante//
+                    while(cont1<=nNotas)                                        //sentencia while se realiza lo siguiente solamente si cumple que el contador 1 es menor o igual a la cantidad de notas//
+                    {
+                    printf("Ingrese la nota %d\n", cont1);                      //se imprime el numero de nota que corresponde y se ingresa la nota//
+                    scanf("%f", &notas);                                        //lee las notas//
+                    sum=sum+notas;                                              //formula para sacar la sumatoria de todas las notas del estudiante//
+                    cont1++;                                                    //aumenta el contador 1//
+                    }
+                    prom=sum/nNotas;                                            //formula para sacar el promedio del estudiante//
+                    sum=0;                                                      //la suma vuelve a inicialiazar en 0//
+                    printf("El promedio del estudiante es: %.2f\n", prom);      //se imprime el promedio del estudiante//
+                    if(prom>=6)                                                 //sentencia if con condicion que el promedi sea mayor o igual a 6//
+                        printf("El estudiante aprueba");                        //si cumple la condicion se imprime que el estudiante aprobo//
+                    else                                                        //si no cumple la condicion se realiza lo siguiente//
+                        printf("El estudiante reprueba");                       //se imprime que el estudiante reprobo//
+                    cont++;                                                     //aumenta el contador//
+                }
+                
+                break;                                                          //fin caso 2//
+                default:                                                        //si la opcion no existe se realiza lo siguiente//
+                printf("Opcion incorrecta");                                    //se imprime que la opciomn es invalida//
+                break;                                                          //fin del menu//
+            }
+            
+            break;                                                              //fin caso 18//
+            case 19:                                                            //inicio caso 19//
+            printf("Ingrese el numero:");                                       //se ingresa el numero//
+            scanf("%d", &nume);                                                 //lee el numero//
+            do                                                                  //sentencia do while//
+            {
+                if (nume<0)                                                     //sentencia if si num menor a 0//                                            
+                printf("Ingrese el numero nuevamente:");                        //se escribe de nuevo el numero//
+                scanf("%d", &nume);                                             //se lee el numero//
+                numCuad=0;                                                      //el numero al cuadrado comienza en 0//
+                if(nume>0)                                                      //sentencia if si numero mayor 0//
+                    numCuad=pow(nume, 2);                                       //formula para el numero al cuadrado//
+                    suma=suma+numCuad;                                          //formula para la sumatoria//
+                    printf("El numero: %d al cuadrado es: %d\n", nume, numCuad);        //se imprime el numero y el cuadradoo deñl numero//
+            }while (nume);                                                      //condiciion del do while//
+            printf("La suma de los numeros al cuadrado es: %d\n", suma);        //se imprime el resultado de la sumatoria//
+            
+            break;                                                              //fin caso 19 //
+            default:                                                            //si la opcion no existe se realiza lo siguiente//
+            printf("Opcion incorrecta");                                        //se imprime que la opciomn es invalida//
+            break;                                                              //fin del menu//
+        }
+}
